@@ -60,3 +60,4 @@ Sougou news:
 -----------------------------------------------------------
 Checking the results of test dataset. test accuracy    0.935
 
+Note: Getting an error while testing a sample sentence using the predict method, will try to resolve it.
