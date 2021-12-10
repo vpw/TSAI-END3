@@ -21,8 +21,7 @@ TODO
 
 ## Metrics
 ### Precision, Recall, & F1 score
-To understand these we need to understand the True positives, False positves, True negatives and False negatives, which are shown in the following Confusion matrix.
-[
+To understand these we need to understand the True positives, False positves, True negatives and False negatives, which are shown in the following [Confusion matrix](./resources/conf-matrix.png).
 
 #### Precision
 
