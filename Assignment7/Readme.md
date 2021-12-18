@@ -110,13 +110,22 @@ The Unigram perplexity does not seem to have decreased while the bigram perplexi
 
 ## References
 [1] https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html
+
 [2] https://colab.research.google.com/github/pytorch/tutorials/blob/gh-pages/_downloads/a60617788061539b5449701ae76aee56/seq2seq_translation_tutorial.ipynb#scrollTo=FERm77UJpcmX_
+
 [3] https://towardsdatascience.com/a-look-at-precision-recall-and-f1-score-36b5fd0dd3ec
+
 [4] https://aclanthology.org/P02-1040.pdf
+
 [5] https://cloud.google.com/translate/automl/docs/evaluate#bleu
+
 [6] https://arxiv.org/abs/1904.09675
+
 [7] https://github.com/Tiiiger/bert_score 
+
 [8] https://towardsdatascience.com/perplexity-in-language-models-87a196019a94
+
 [9] https://towardsdatascience.com/understanding-word-n-grams-and-n-gram-probability-in-natural-language-processing-9d9eef0fa058
+
 [10] https://www.katrinerk.com/courses/python-worksheets/language-models-in-python
 
