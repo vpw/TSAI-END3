@@ -82,18 +82,21 @@ It can also be considered as the exponential of the cross-entropy:
 
 #### Approach
 
-I used NLTKs FreqDist, ProbDistI (DictionaryProbDist), to get the Unigram probaility (in function getUnigramProbs) based on the target sentences corpus, and ConditionalFreqDist, ConditionalProbDist, and ngrams to compute the bigram probability (in function getBigramProbs). I then used these probability distributions to compute the Unigram and bigram perplexities in the functions getUnigramPerplexity and getBigramPerplexity, for each of the sentences and found the average perplexity for the set of predicted sentences. I found this reference [10] useful in this implementation.
+I used NLTKs FreqDist, ProbDistI (DictionaryProbDist), to get the Unigram probaility (in function getUnigramProbs) based on the target sentences corpus, and ConditionalFreqDist, ConditionalProbDist, and ngrams to compute the bigram probability (in function getBigramProbs) ie. I used a language model built on the training set data (the target sentences) and not on some external corpus, as I think it is sufficient to capture the structure of the translated sentences. I then used these probability distributions to compute the Unigram and bigram perplexities in the functions getUnigramPerplexity and getBigramPerplexity, for each of the sentences and found the average perplexity for the set of predicted sentences. I found this reference [10] useful in this implementation.
 
 ## Implementation and results
 
 I modified the trainIters function to evalute these metrics for eval_last times for every eval_every iterations during the end of the iteration, and have printed the metrics during these evaluations. I also plotted these metrics during these evaluations (can be seen in the colab file on github).
 I ran the traiing for 75000 iterations, and got the metrics every 1000 iterations for the last 20 times (55000-75000).
+Logs can be seen in the [colab file](./Assignment7.ipynb)
 
-Some observations:
+### Observations:
 
-Precision, recall and F-score are somehow coming the same, but increasing over the iterations reaching a max of about 0.56.
+Precision, recall and F-score are somehow coming the same (this means something is incorrect in the way I have mapped the language translations to TP, FP, TN, FN), but increasing over the iterations reaching a max of about 0.56.
 
 ![PRF](./resources/PRFiter.png)
+
+(Note: the axes are not seen in these images, but can be seen in the [colab file](./Assignment7.ipynb).
 
 BLEU score is seen to be increasing in a similar trend, reaching a max of about 0.72.
 
@@ -103,9 +106,11 @@ As as the BERT scores with a max of about 8.25.
 
 ![BERT](./resources/BERTiter.png)
 
-The Unigram perplexity does not seem to have decreased while the bigram perplexity has reduced from about 2.6 to 2.1 over the training.
+The Unigram perplexity does not seem to have decreased while the bigram perplexity has reduced from about 2.6 to 2.1 over the training. 
 
 ![PERP](./resources/Perpiter.png)
+
+Overall all scores indicate a similar sort of increase in accuracy (and decrease in perplexity (except for the Unigram model)).
 
 
 ## References
