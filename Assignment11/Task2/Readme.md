@@ -158,4 +158,4 @@ Total training took 0:11:38 (h:mm:ss)
 
 ## Results on 5 samples
 
-
+Could not capture it while running the notebook, and it was too late to run it again before the deadeline.
